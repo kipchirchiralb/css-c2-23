@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      h1 {
+        font-style: italic;
+      }
+      p {
+        font-size: 6px;
+      }
+      .thick {
+        font-weight: 900;
+        color: chocolate;
+      }
+      #uniquep {
+        text-decoration: underline;
+      }
+      input[type="email"] {
+        border-color: red;
+      }
+      a[href="http://tiktok.com"]
+      {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSSS Selectors</h1>
+    <ul>
+      <li>Element/Tag name Selector</li>
+      <li class="thick">Class Selector</li>
+      <li>
+        ID Selector - id attributes are used to uniquely identify an element
+      </li>
+      <li>Attribute Selector</li>
+      <li>
+        <h2>Combinator Selectors</h2>
+        <ul>
+          <li>Descendant selector</li>
+          <li>Child Selector</li>
+          <li>Adjacent Sibling Selector</li>
+          <li>General Sibling Selector</li>
+        </ul>
+      </li>
+    </ul>
+    <a href="http://tiktok.com">Tiktok</a>
+    <a href="https://iktok.com">Tiktok</a>
+
+    <p id="uniquep">pragraph 1</p>
+    <p class="thick" id="specialp">pragraph 2</p>
+    <p>pragraph 3</p>
+
+    <form>
+      <label for="username">User </label>
+      <input type="text" id="username" placeholder="username" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="email" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+
+      <label for="gender">Gender</label>
+      <input type="radio" name="gender" id="male" />
+      <label for="male">Male</label>
+
+      <input type="radio" name="gender" id="female" />
+      <label for="female">Female</label>
+
+      <input type="submit" value="login" />
+    </form>
+  </body>
+</html>
