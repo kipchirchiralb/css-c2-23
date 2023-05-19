@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #statisticsSection {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px;
+        text-align: center;
+      }
+      p {
+        font-size: 36px;
+        font-weight: bold;
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dolorum
+      voluptates, corporis est non optio aliquid tenetur deleniti fuga magnam
+      similique natus nesciunt dolorem ut aliquam dicta vitae sint in
+      dignissimos possimus et labore nisi velit laboriosam. Quisquam reiciendis
+      architecto voluptates quibusdam. Facilis ut incidunt suscipit numquam
+      animi ex cupiditate debitis iusto sed officiis necessitatibus expedita
+      soluta nemo, quidem praesentium doloremque! Expedita voluptatibus
+      excepturi temporibus. Libero reiciendis non vitae perferendis? Distinctio,
+      iste ipsam dolorum provident minima dignissimos natus et consequuntur
+      temporibus minus iure qui quasi? Eligendi, quo. Dolore ex corporis sit
+      dolorem nesciunt corrupti natus quibusdam magnam officiis eligendi nemo
+      quisquam nostrum rem odit excepturi est sed, ducimus in, eaque optio
+      repudiandae impedit iste! Illo saepe earum dolorem atque, molestias
+      inventore ullam officiis rem quos porro quaerat obcaecati suscipit cum ab
+      numquam? Corrupti ducimus exercitationem est eum magnam perferendis vero
+      voluptate qui vel repellat? Quas quasi, officia ut tenetur nostrum, dicta
+      voluptatibus blanditiis veritatis doloribus quae tempora. Deserunt dolores
+      expedita perspiciatis? Modi voluptatibus nam perferendis quia, libero,
+      illum culpa obcaecati, commodi enim aliquid suscipit ipsum omnis
+      consequatur nulla quas harum ut dolore quisquam cumque neque minus? Fugit
+      ullam rem quam, ad alias eos deleniti voluptatem! Perspiciatis rerum saepe
+      officia hic id, esse vero. Explicabo delectus doloribus vero, sequi
+      laborum dignissimos animi architecto quod impedit natus numquam! Dolor,
+      non eligendi? Cum velit rerum, sit nemo sunt voluptatum modi nihil esse
+      expedita nisi aspernatur totam dicta nesciunt reiciendis quae,
+      exercitationem aliquid quisquam necessitatibus! Corrupti placeat
+      voluptates iste facilis similique, fugiat laboriosam amet quibusdam
+      consequatur reiciendis numquam porro quaerat magni quidem. Totam eum
+      libero, laborum nostrum distinctio dolorum, facilis rem eaque obcaecati
+      vero exercitationem autem aperiam, fuga eveniet assumenda suscipit
+      reprehenderit iusto? Commodi saepe, officia corrupti praesentium illo
+      deserunt incidunt sapiente excepturi dignissimos, atque pariatur totam
+      aliquid perferendis dolor esse minus reprehenderit, ea accusantium placeat
+      reiciendis! Optio ab illum quisquam. Similique aperiam voluptatem quaerat,
+      libero facilis eum architecto facere nihil, alias voluptatibus consequatur
+      fugiat placeat obcaecati ab inventore, labore illum recusandae amet minus
+      dignissimos adipisci et est. Placeat ipsa sint possimus nam ipsum
+      molestiae qui debitis, modi repellendus nesciunt aspernatur a at
+      necessitatibus illo. Neque saepe, rerum delectus harum reprehenderit,
+      illum nesciunt tempora exercitationem fuga officia quia. Nemo voluptatem
+      itaque fugiat, at totam maiores autem sapiente! Dolore illo distinctio
+      eaque totam, quos quibusdam nostrum quisquam. Quasi natus mollitia
+      dignissimos dicta quas, sed omnis quod voluptatum optio, hic eius. Optio,
+      provident. Harum, doloremque! Ea consequatur et reprehenderit. Sunt omnis
+      exercitationem quae? Sequi, obcaecati expedita quis nisi cumque velit,
+      quod nihil voluptatem aut et amet ducimus. Magni vitae aliquam dolore
+      neque iste, voluptas quae quidem quas incidunt vel voluptatem eius nemo
+      ipsam, nesciunt, eos corporis. Velit praesentium optio maxime non tempora,
+      facilis obcaecati minus architecto quasi earum explicabo commodi,
+      quibusdam temporibus nemo natus vel voluptates distinctio dolorum
+      dignissimos. Provident perspiciatis optio consectetur nulla minima
+      accusantium, re laborum tempora. Assumenda, dignissimos impedit, similique
+      co
+    </div>
+    <div id="statisticsSection">
+      <div class="counter">
+        <h3>Number of Users</h3>
+        <p id="userCount">0</p>
+      </div>
+      <div class="counter">
+        <h3>Number of Applications</h3>
+        <p id="appCount">0</p>
+      </div>
+      <div class="counter">
+        <h3>Number of Countries</h3>
+        <p id="locationCount">0</p>
+      </div>
+    </div>
+    <script>
+      // Function to animate the counter
+      // Function to animate the counter
+      function animateCounter(target, start, end, duration) {
+        let current = start;
+        const range = end - start;
+        const increment = range / (duration / 10); // Calculate the step increment based on duration
+        const element = document.getElementById(target);
+        const timer = setInterval(() => {
+          current += increment;
+          element.innerText = Math.round(current); // Round the current value for whole numbers
+          if (
+            (increment > 0 && current >= end) ||
+            (increment < 0 && current <= end)
+          ) {
+            clearInterval(timer);
+            element.innerText = end; // Set the final value explicitly to ensure accuracy
+          }
+        }, 10); // Use a fixed interval of 10ms for smoother animation
+      }
+
+      // Call the counter animation
+
+      animateCounter("userCount", 0, 100, 2000); // Example: Start from 0 and animate to 100 in 2 seconds
+      animateCounter("appCount", 50, 15000, 2000); // Example: Start from 50 and animate to 1500 in 2 seconds
+      animateCounter("locationCount", 2, 42, 2000); // Example: Start from 50 and animate to 1500 in 2 seconds
+
+      // Select the statistics section element
+      const statisticsSection = document.getElementById("statisticsSection");
+
+      // Create a new Intersection Observer
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            // Call the animateCount() function when the statistics section appears in the viewport
+            animateCounter("userCount", 0, 100, 2000); // Example: Start from 0 and animate to 100 in 2 seconds
+            animateCounter("appCount", 50, 15000, 2000); // Example: Start from 50 and animate to 1500 in 2 seconds
+            animateCounter("locationCount", 2, 42, 2000); // Example: Start from 50 and animate to 1500 in 2 seconds
+
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      // Start observing the statistics section
+      observer.observe(statisticsSection);
+    </script>
+  </body>
+</html>
